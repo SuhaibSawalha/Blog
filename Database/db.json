@@ -50,6 +50,11 @@
       "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNDYzNDEzLCJleHAiOjE3MDI0NjcwMTMsInN1YiI6IjEifQ.PrerqEdgrI951WEd8GxRL-HwMkVNUAU3Fg7uSPNA48I",
       "user_id": 1,
       "id": 3
+    },
+    {
+      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNDc1NzQyLCJleHAiOjE3MDI0NzkzNDIsInN1YiI6IjEifQ.oSBWrnCZZgDNxl-NoJaivB4GlHcmkWL4W87bf940mdE",
+      "user_id": 1,
+      "id": 4
     }
   ]
 }

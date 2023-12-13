@@ -14,6 +14,7 @@ async function displayPost() {
     const post = new Post();
     post.objectValues(data);
     console.log(post.content);
+    document.title = post.title;
     document.querySelector("article").innerHTML = `
         <div class="d-flex justify-content-between">
             <h5 style="color: var(--mainGreen)">${post.author}</h5>

@@ -11,3 +11,30 @@ article {
   height: 2px;
   margin-bottom: 40px;
 }
+
+@media (max-width: 991.5px) {
+  article {
+    padding: 20px 30px !important;
+  }
+}
+
+@media (max-width: 767.5px) {
+  article {
+    padding: 20px 20px !important;
+  }
+}
+
+@media (max-width: 575.5px) {
+  article {
+    padding: 20px 15px !important;
+  }
+  article h5 {
+    font-size: 1rem;
+  }
+  article h2 {
+    font-size: 1.2rem;
+  }
+  article p {
+    font-size: 0.8rem;
+  }
+}

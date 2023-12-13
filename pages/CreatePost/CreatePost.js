@@ -31,10 +31,6 @@ document
       article = document.createElement("article");
       document.querySelector("main").appendChild(article);
     }
-    article.style.marginTop = "50px";
-    article.style.color = "white";
-    article.style.border = "1px solid var(--mainGreen)";
-    article.style.padding = "20px";
     await setUserName();
     const post = new Post();
     post.defaultValues(title, content, getCookie("UserName"));
