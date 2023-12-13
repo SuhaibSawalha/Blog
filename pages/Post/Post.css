@@ -1,0 +1,13 @@
+article {
+  margin-top: 100px;
+  color: white;
+  border: 1px solid var(--mainGreen);
+  padding: 20px 40px !important;
+}
+
+.line {
+  width: max(40%, 250px);
+  background-color: var(--mainPurple);
+  height: 2px;
+  margin-bottom: 40px;
+}

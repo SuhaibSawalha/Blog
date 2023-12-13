@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Post</title>
+    <link rel="icon" type="image/png" href="./../../assets/img/logo.png" />
+    <link rel="stylesheet" href="./../../assets/Bootstrap/style.css" />
+    <link rel="stylesheet" href="./../../assets/style.css" />
+    <link rel="stylesheet" href="./CreatePost.css" />
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <header></header>
+    <main class="container">
+      <h1>Create Your Post</h1>
+      <form>
+        <div class="input-group">
+          <div>
+            <label>Title</label>
+            <br />
+            <input
+              required
+              type="text"
+              class="form-control"
+              placeholder="Title"
+              aria-label="title"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+        <div class="input-group">
+          <div>
+            <label>content</label>
+            <br />
+            <textarea
+              class="form-control"
+              rows="15"
+              placeholder="content"
+            ></textarea>
+          </div>
+        </div>
+      </form>
+      <div>
+        <button class="btn btn-submit">Preview</button>
+        <button class="btn btn-success">Post</button>
+        <p>|</p>
+        <button class="btn btn-danger">Delete</button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./../../assets/main.js"></script>
+    <script src="./../../assets/Bootstrap/main.js"></script>
+    <script type="module" src="./../../assets/header_footer.js"></script>
+    <script type="module" src="./CreatePost.js"></script>
+  </body>
+</html>
