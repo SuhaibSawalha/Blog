@@ -41,9 +41,8 @@ async function createSession(session_id, user_id) {
 
 async function setUserId() {
   const session_id = getCookie("session_id");
-  if (!session_id) {
-    setCookie("user_id", "", 0);
-    return;
+  if (session_id === null) {
+    return null;
   }
   try {
     const response = await fetch(`${api}/sessions/?session_id=${session_id}`);
@@ -52,34 +51,37 @@ async function setUserId() {
       throw new Error();
     }
     if (data.length !== 0) {
-      setCookie("user_id", data[0].user_id, 365);
-      return;
+      const user_response = await fetch(`${api}/users/${data[0].user_id}`);
+      if (user_response.status !== 200) {
+        throw new Error();
+      }
+      const user_data = await user_response.json();
+      return user_data;
     }
-    setCookie("user_id", "", 0);
-    setCookie("session_id", "", 0);
+    throw new Error();
   } catch (error) {
-    setCookie("user_id", "", 0);
     setCookie("session_id", "", 0);
+    return null;
   }
 }
 
-async function setUserName() {
-  await setUserId();
-  if (!getCookie("user_id")) {
-    return;
-  }
-  try {
-    const response = await fetch(`${api}/users/${getCookie("user_id")}`);
-    const data = await response.json();
-    if (response.status !== 200) {
-      throw new Error();
-    }
-    setCookie("UserName", `${data.firstName} ${data.lastName}`, 365);
-    return;
-  } catch (error) {
-    setCookie("UserName", "", 0);
-  }
-}
+// async function setUserName() {
+//   await setUserId();
+//   if (!getCookie("user_id")) {
+//     return;
+//   }
+//   try {
+//     const response = await fetch(`${api}/users/${getCookie("user_id")}`);
+//     const data = await response.json();
+//     if (response.status !== 200) {
+//       throw new Error();
+//     }
+//     setCookie("UserName", `${data.firstName} ${data.lastName}`, 365);
+//     return;
+//   } catch (error) {
+//     setCookie("UserName", "", 0);
+//   }
+// }
 
 function Logout() {
   setCookie("session_id", "", 0);
@@ -95,13 +97,6 @@ function escape(str) {
     .replace(/"/g, "&quot;")
     .replace(/\n/g, "<br>");
 }
-
-async function getPosts() {
-  const response = await fetch(`${api}/users`);
-  const data = await response.json();
-  console.log(data);
-}
-// getPosts();
 
 // document.getElementById("myForm").addEventListener("submit", function (e) {
 //   event.preventDefault();

@@ -1,5 +1,4 @@
-await setUserId();
-if (getCookie("user_id")) {
+if ((await setUserId()) !== null) {
   window.location.href = "./../Home/Home.html";
 }
 

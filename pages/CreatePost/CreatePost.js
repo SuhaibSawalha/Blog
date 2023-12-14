@@ -1,5 +1,4 @@
-await setUserId();
-if (!getCookie("user_id")) {
+if ((await setUserId()) === null) {
   window.location.href = "./../Login/Login.html";
 }
 
@@ -31,13 +30,12 @@ document
       article = document.createElement("article");
       document.querySelector("main").appendChild(article);
     }
-    await setUserName();
+    const user_data = await setUserId();
     const post = new Post();
-    post.defaultValues(title, content, getCookie("UserName"));
-    console.log(post.content);
+    post.defaultValues(title, content, user_data.id);
     article.innerHTML = `
     <div class="d-flex justify-content-between">
-        <h5 style="color: var(--mainGreen)">${post.author}</h5>
+        <h5 style="color: var(--mainGreen)">${user_data.firstName} ${user_data.lastName}</h5>
         <h5 style="color: var(--mainGreen); margin-bottom: 30px">${post.fullDate}</h5>
     </div>
     <h2 style="font-family: var(--h1-font)">${post.title}</h2>
@@ -59,7 +57,8 @@ document
     }
     try {
       const post = new Post();
-      post.defaultValues(title, content, getCookie("UserName"));
+      const user_data = await setUserId();
+      post.defaultValues(title, content, user_data.id);
       const response = await fetch(`${api}/posts`, {
         method: "POST",
         body: post.toDataBase(),
@@ -71,7 +70,7 @@ document
         throw new Error();
       }
       const data = await response.json();
-      await addPostToUser(getCookie("user_id"), data.id);
+      await addPostToUser(user_data.id, data.id);
     } catch (error) {
       window.onbeforeunload = null;
       window.location.href = "./../error404/error404.html";

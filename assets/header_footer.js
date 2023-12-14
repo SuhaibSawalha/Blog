@@ -49,7 +49,7 @@ const header = (document.getElementsByTagName("header")[0].innerHTML = `
       </div>
         <div class="logs">
         ${
-          getCookie("session_id")
+          (await setUserId()) !== null
             ? `<li class="nav-item">
             <a class="nav-link" href="#" onclick="Logout()">Logout</a>
             </li>`

@@ -1,19 +1,21 @@
 class Post {
   constructor() {}
-  setValues(title, content, author, date, comments, likes) {
+  setValues(title, content, author, date, comments, likes, saves) {
     this.title = title;
     this.content = content;
     this.author = author;
     this.date = date;
     this.comments = comments;
     this.likes = likes;
+    this.saves = saves;
   }
   defaultValues(title, content, author) {
     this.setValues(
       escape(title),
       escape(content),
-      escape(author),
+      author,
       new Date(),
+      [],
       [],
       []
     );
@@ -25,7 +27,8 @@ class Post {
       data.author,
       data.date,
       data.comments,
-      data.likes
+      data.likes,
+      data.saves
     );
   }
   get fullDate() {

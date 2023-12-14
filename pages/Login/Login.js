@@ -1,5 +1,4 @@
-await setUserId();
-if (getCookie("user_id")) {
+if ((await setUserId()) !== null) {
   window.location.href = "./../Home/Home.html";
 }
 
@@ -14,8 +13,6 @@ document.getElementsByTagName("i")[0].addEventListener("click", function () {
     document.querySelector(`input[aria-label="password"`).type = "password";
   }
 });
-
-//.parentElement.insertBefore
 
 function writeMessage() {
   if (document.getElementById("incorrect")) {

@@ -1,33 +1,12 @@
 {
-  "posts": [
-    {
-      "title": "Islam: A Journey Through Faith and Practice",
-      "content": "Islam is one of the major monotheistic Abrahamic religions, along with Judaism and Christianity. It was founded by Prophet Muhammad in the 7th century CE in the Arabian Peninsula. The followers of Islam, known as Muslims, believe in the teachings of the Qur&#39;an, which is considered the holy book of Islam and believed to be the literal word of God (Allah) as revealed to Prophet Muhammad.<br><br>Key Beliefs:<br><br>Five Pillars of Islam:<br><br>1- Shahada (Declaration of Faith): The basic creed of Islam, declaring the oneness of God and the prophethood of Muhammad.<br>2- Salah (Prayer): Muslims are required to perform ritual prayers five times a day facing the Kaaba in Mecca.<br>3- Zakat (Charity): Muslims are obligated to give to charity, typically a specific percentage of their wealth, to help those in need.<br>4- Sawm (Fasting during Ramadan): Muslims fast from dawn to sunset during the holy month of Ramadan as an act of self-discipline and reflection.<br>5- Hajj (Pilgrimage to Mecca): Muslims who are physically and financially able are required to undertake a pilgrimage to Mecca at least once in their lifetime.<br><br>Prophets:<br><br>Muslims believe in the prophethood of numerous prophets, including Adam, Noah, Abraham, Moses, and Jesus, among others. Muhammad is considered the final prophet.<br>Qur&#39;an:<br><br>The Qur&#39;an is the central religious text of Islam, divided into chapters called Surahs, which are further divided into verses called Ayahs. It covers various aspects of life, ethics, and law.<br>Mosques and Worship:<br><br>Muslims gather for communal prayers at mosques. Friday is a special day for congregational prayers.<br>Islamic Law (Sharia):<br><br>Sharia is the Islamic legal system derived from the Qur&#39;an and the Hadith (sayings and actions of Prophet Muhammad). It covers various aspects of personal and communal life.<br>It&#39;s important to note that Islam is a diverse religion with a wide range of cultural and historical traditions. This overview provides a general understanding, but for in-depth and accurate information, it&#39;s recommended to consult reputable sources, Islamic scholars, or visit local mosques and Islamic centers.",
-      "author": "Suhaib Sawalha",
-      "date": "13 December 2023",
-      "comments": [],
-      "likes": [],
-      "id": 1
-    },
-    {
-      "title": "Hamas: A Palestinian Islamist Political Party and Militant Group",
-      "content": "Hamas, which stands for the Harakat al-Muqawama al-Islamiyya or the Islamic Resistance Movement, is a Palestinian Sunni-Islamist political party and militant group that has been designated as a terrorist organization by many countries, including the United States, European Union, Canada, Israel, and Japan.<br><br>History and Formation:<br><br>Hamas was founded in 1987 during the First Intifada, a Palestinian uprising against Israeli occupation. It quickly gained popularity among Palestinians due to its strong opposition to the Israeli occupation and its commitment to establishing an Islamic state in all of Palestine. Hamas&#39;s charter, issued in 1988, calls for the destruction of Israel and the establishment of a Palestinian state based on Islamic law.<br><br>Structure and Leadership:<br><br>Hamas has two main branches: a political wing and a military wing, known as the Izz ad-Din al-Qassam Brigades. The political wing participates in elections and governs the Gaza Strip, which it captured from the Palestinian Authority in 2007. The military wing is responsible for carrying out attacks against Israel.<br><br>Hamas&#39;s leadership structure is complex and opaque. The group is led by a Politburo, which is made up of senior Hamas officials. The Politburo is responsible for setting the group&#39;s overall strategy and policies.<br><br>Ideology and Goals:<br><br>Hamas&#39;s ideology is based on a combination of Palestinian nationalism and Sunni Islamism. The group believes that all of Palestine is Islamic land and that it is the duty of Muslims to liberate it from Israeli occupation. Hamas also believes that violence is a legitimate means of achieving its objectives.<br><br>Hamas&#39;s main goals are:<br><br>To end the Israeli occupation of the Palestinian territories<br>To establish an independent Palestinian state in all of Palestine<br>To implement Islamic law in Palestine<br>Activities and Operations:<br><br>Hamas has been involved in numerous attacks against Israeli civilians and military targets. These attacks have included suicide bombings, rocket attacks, and shootings. Hamas has also built a network of tunnels that it uses to launch attacks against Israel and to smuggle weapons and other supplies into Gaza.<br><br>In addition to its military activities, Hamas also provides social services to Palestinians in Gaza, including education, healthcare, and welfare programs. The group also runs its own media outlets, which it uses to spread its message and promote its ideology.<br><br>International Relations:<br><br>Hamas is considered a terrorist organization by many countries. As a result, it is subject to sanctions and other restrictions. Hamas also has limited diplomatic relations with other countries.<br><br>However, Hamas does have some allies in the region, including Iran, Syria, and Qatar. These countries provide Hamas with financial and military support.<br><br>Impact on the Israeli-Palestinian Conflict:<br><br>Hamas has played a significant role in the Israeli-Palestinian conflict. Its attacks against Israel have led to numerous deaths and injuries on both sides. Hamas&#39;s control of the Gaza Strip has also been a major obstacle to peace efforts.<br><br>Hamas&#39;s future is uncertain. The group faces a number of challenges, including internal divisions, financial constraints, and Israeli pressure. However, Hamas remains a powerful force in Palestinian politics and is likely to continue to play a major role in the Israeli-Palestinian conflict.<br><br>Here are some additional resources on Hamas:<br><br>Council on Foreign Relations: https://www.cfr.org/middle-east-and-north-africa/palestinian-territories<br>BBC News: https://www.amazon.co.uk/Hamas-Resistance-Movement-Beverley-Milton-Edwards/dp/0745642969<br>The Washington Post: https://www.washingtonpost.com/national-security/2023/10/19/hamas-weapons-drones-submersible-missiles/<br>The New York Times: https://www.nytimes.com/news-event/israel-hamas-gaza",
-      "author": "Suhaib Sawalha",
-      "date": "13 December 2023",
-      "comments": [],
-      "likes": [],
-      "id": 2
-    }
-  ],
   "users": [
     {
       "email": "suhaib@suhaib.com",
-      "password": "$2a$10$XJfJJ41rv3z1NoTTUzXATOiE0oDLiVUWC8Zb7FyPfA0ACJiuuPEQ6",
+      "password": "$2a$10$ehxesEEpf2HHLLRlUpMp1.MQbmYyhji00/cpr21s7Z3VMTDVBDUQm",
       "firstName": "Suhaib",
       "lastName": "Sawalha",
       "posts": [
-        1,
-        2
+        1
       ],
       "comments": [],
       "likes": [],
@@ -37,24 +16,32 @@
   ],
   "sessions": [
     {
-      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNDE2ODI3LCJleHAiOjE3MDI0MjA0MjcsInN1YiI6IjEifQ.v-FSVl4zthvKYK4jVteJl2mlMWpYmiho6XDLQBwBKVg",
+      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNTc2NTUxLCJleHAiOjE3MDI1ODAxNTEsInN1YiI6IjEifQ.soF22zmOzrWXYFNBPLFx2S7WJuPwpGoa3ATlmN9OzbA",
       "user_id": 1,
       "id": 1
     },
     {
-      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNDYzNDA5LCJleHAiOjE3MDI0NjcwMDksInN1YiI6IjEifQ.0-yRRPSISc6PEbvRCVrZP5Sr11SAPFTMOrWhri9vpJ8",
+      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNTc3MjkwLCJleHAiOjE3MDI1ODA4OTAsInN1YiI6IjEifQ.OBg9FEmT-NAJK0uvQ1FrEV45YR6ayMQiV0rFrf5nA-4",
       "user_id": 1,
       "id": 2
     },
     {
-      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNDYzNDEzLCJleHAiOjE3MDI0NjcwMTMsInN1YiI6IjEifQ.PrerqEdgrI951WEd8GxRL-HwMkVNUAU3Fg7uSPNA48I",
+      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNTc3MzExLCJleHAiOjE3MDI1ODA5MTEsInN1YiI6IjEifQ.6A2o-wwATa9VCwt-MLqBXElbK2YeMqmHrV5PB4Le2wM",
       "user_id": 1,
       "id": 3
-    },
-    {
-      "session_id": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1aGFpYkBzdWhhaWIuY29tIiwiaWF0IjoxNzAyNDc1NzQyLCJleHAiOjE3MDI0NzkzNDIsInN1YiI6IjEifQ.oSBWrnCZZgDNxl-NoJaivB4GlHcmkWL4W87bf940mdE",
-      "user_id": 1,
-      "id": 4
     }
-  ]
+  ],
+  "posts": [
+    {
+      "title": "W",
+      "content": "d",
+      "author": 1,
+      "date": "14 December 2023",
+      "comments": [],
+      "likes": [],
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "saves": []
 }
