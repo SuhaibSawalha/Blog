@@ -1,0 +1,114 @@
+main {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+}
+
+aside {
+  width: 35%;
+  height: calc(100% - 20px);
+  background-color: var(--mainGray);
+  border: 1px solid var(--mainGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+aside img {
+  width: 280px;
+  height: 250px;
+}
+
+aside p {
+  font-size: 14px;
+}
+
+aside p span {
+  color: var(--mainPurple);
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+aside p span:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+aside section {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+aside section button {
+  height: 40px;
+  width: 135px;
+  margin-top: 10px;
+}
+
+#posts {
+  width: 60%;
+  height: 100%;
+}
+
+#createPost i {
+  color: var(--mainPurple);
+  font-size: 2.5rem;
+  position: relative;
+}
+#createPost span {
+  color: white;
+  background-color: var(--mainGreen);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  top: 0;
+  left: 25px;
+  border: 1px solid white;
+  position: absolute;
+}
+#createPost span p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+#createPost button {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.post-card {
+  width: 48%;
+  border: 1px solid var(--mainGreen);
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.post-card-title {
+  font-family: var(--h1-font);
+}
+.line {
+  width: max(40%, 250px);
+  background-color: var(--mainPurple);
+  height: 2px;
+  margin-bottom: 20px;
+}
+.post-card .btn {
+  position: absolute;
+  bottom: 15px;
+}

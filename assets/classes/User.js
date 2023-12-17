@@ -28,7 +28,7 @@ class User {
       [],
       [],
       [],
-      "./../img/profile.png"
+      "./../../assets/img/profile.jpg"
     );
   }
   objectValues(data) {

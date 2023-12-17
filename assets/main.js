@@ -65,24 +65,6 @@ async function setUserId() {
   }
 }
 
-// async function setUserName() {
-//   await setUserId();
-//   if (!getCookie("user_id")) {
-//     return;
-//   }
-//   try {
-//     const response = await fetch(`${api}/users/${getCookie("user_id")}`);
-//     const data = await response.json();
-//     if (response.status !== 200) {
-//       throw new Error();
-//     }
-//     setCookie("UserName", `${data.firstName} ${data.lastName}`, 365);
-//     return;
-//   } catch (error) {
-//     setCookie("UserName", "", 0);
-//   }
-// }
-
 function Logout() {
   setCookie("session_id", "", 0);
   window.location.href = "./../Home/Home.html";
@@ -97,25 +79,3 @@ function escape(str) {
     .replace(/"/g, "&quot;")
     .replace(/\n/g, "<br>");
 }
-
-// document.getElementById("myForm").addEventListener("submit", function (e) {
-//   event.preventDefault();
-//   fetch(`${api}/posts`, {
-//     method: "POST",
-//     body: JSON.stringify({
-//       author: "John Doe",
-//       title: "My new post",
-//       content:
-//         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, quia.",
-//       comments: [],
-//     }),
-//     headers: {
-//       "Content-type": "application/json; charset=UTF-8",
-//     },
-//   });
-//   window.location.href = "./test.html";
-// });
-
-// var bcrypt = require("bcrypt");
-
-// import bcrypt from "./../node_modules/bcryptjs/dist/bcrypt.js";
