@@ -91,7 +91,11 @@ async function displayPage() {
   }
 
   window.addEventListener("scroll", function () {
-    this.document.querySelector("aside").style.marginTop = `${this.scrollY}px`;
+    if (this.window.innerWidth > 1199.5) {
+      this.document.querySelector(
+        "aside"
+      ).style.marginTop = `${this.scrollY}px`;
+    }
   });
 
   if (myProfile) {
@@ -176,15 +180,16 @@ async function getPosts(id) {
 function Card(post) {
   return `
     <div class="post-card">
-      <div class="post-card-title">
+      <div class="post-card-title" style="overflow-wrap: break-word">
         <h5>${post.title.substr(0, 120)}${
     post.title.length > 120 ? "..." : ""
   }</h5>
       </div>
       <div class=line></div>
-      <p class="post-card-text">${post.content.substr(0, 200)}${
-    post.content.length > 200 ? "..." : ""
-  }</p>
+      <p class="post-card-text" style="overflow-wrap: break-word">${post.content.substr(
+        0,
+        200
+      )}${post.content.length > 200 ? "..." : ""}</p>
     <div style="width: 1px; height: 40px"></div>
       <a href="./../Post/Post.html?id=${
         post.id

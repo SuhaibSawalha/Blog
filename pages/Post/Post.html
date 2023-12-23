@@ -21,23 +21,43 @@
       <section id="actions" class="row">
         <div class="col-4">
           <button id="likeButton">
-            <i class="bi bi-hand-thumbs-up"></i>
+            <i class="bi bi-hand-thumbs-up" id="likeIcon"></i>
             <p>Like</p>
           </button>
         </div>
         <div class="col-4">
           <button id="commentButton">
-            <i class="bi bi-chat-dots"></i>
+            <i class="bi bi-chat-dots" id="commentIcon"></i>
             <p>Comment</p>
           </button>
         </div>
         <div class="col-4">
           <button id="saveButton">
-            <i class="bi bi-file-earmark"></i>
+            <i class="bi bi-file-earmark" id="saveIcon"></i>
             <p>Save</p>
           </button>
         </div>
       </section>
+      <h5 class="ms-3 mt-4" style="color: var(--mainPurple)">
+        <span id="numberOfLikes">0</span> liked this post
+      </h5>
+      <h6 class="ms-3 mt-3" style="color: var(--mainPurple)">
+        comments (<span id="numberOfComments">0</span>):
+      </h6>
+      <section id="comments"></section>
+      <section id="commentForm">
+        <form>
+          <div class="mb-3">
+            <label for="comment" class="form-label">Comment</label>
+            <textarea
+              class="form-control"
+              id="comment"
+              rows="3"
+              placeholder="Write a comment..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">add comment</button>
+        </form>
     </main>
     <div style="width: 1px; height: 100px"></div>
     <footer></footer>

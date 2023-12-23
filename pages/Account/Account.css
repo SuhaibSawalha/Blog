@@ -112,3 +112,60 @@ article {
   position: absolute;
   bottom: 15px;
 }
+
+@media (max-width: 1199.5px) {
+  main {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  aside {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #posts {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199.5px) and (min-width: 991.5px) {
+  article {
+    justify-content: start;
+  }
+  .post-card {
+    width: 32%;
+  }
+  article .post-card:nth-child(3n),
+  article .post-card:nth-child(3n + 2) {
+    margin-left: 2%;
+  }
+}
+
+@media (max-width: 991.5px) {
+}
+
+@media (max-width: 767.5px) {
+  .post-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+  aside p {
+    font-size: 0.8rem;
+  }
+  aside img {
+    width: 250px;
+    height: 220px;
+  }
+  aside section {
+    width: 250px;
+  }
+  aside section button {
+    width: 120px;
+    font-size: 0.8rem !important;
+  }
+}

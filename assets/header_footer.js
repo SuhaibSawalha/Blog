@@ -42,7 +42,9 @@ const header = (document.getElementsByTagName("header")[0].innerHTML = `
             <a class="nav-link" href="./../Posts/Posts.html">Posts</a>
         </li>
         <li class="nav-item ${
-          window.location.href.endsWith("Albums.html") ? "nav-active" : ""
+          window.location.href.includes("Albums/Albums.html")
+            ? "nav-active"
+            : ""
         }">
             <a class="nav-link" href="./../Albums/Albums.html">Albums</a>
         </li>
@@ -51,7 +53,7 @@ const header = (document.getElementsByTagName("header")[0].innerHTML = `
         ${
           (await setUserId()) !== null
             ? `<li class="nav-item">
-            <a class="nav-link" href="#" onclick="Logout()">Logout</a>
+            <a id="logoutNav" class="nav-link" href="#" onclick="Logout()">Logout</a>
             </li>`
             : `<li class="nav-item ${
                 window.location.href.endsWith("Login.html")
@@ -61,7 +63,7 @@ const header = (document.getElementsByTagName("header")[0].innerHTML = `
             <a class="nav-link" href="./../Login/Login.html">Login</a>
             </li>
             <h3 class="text-white">|</h3>
-            <li class="nav-item ${
+            <li id="singupNav"class="nav-item ${
               window.location.href.endsWith("Signup.html")
                 ? "nav-active-logs"
                 : ""

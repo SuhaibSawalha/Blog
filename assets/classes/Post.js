@@ -43,8 +43,9 @@ class Post {
       content: this.content,
       author: this.author,
       date: this.fullDate,
-      comments: this.comments,
       likes: this.likes,
+      comments: this.comments,
+      saves: this.saves,
     };
   }
 

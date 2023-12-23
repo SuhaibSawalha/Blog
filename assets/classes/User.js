@@ -6,8 +6,9 @@ class User {
     email,
     password,
     posts,
-    comments,
     likes,
+    comments,
+    saves,
     photo
   ) {
     this.firstName = firstName;
@@ -15,8 +16,9 @@ class User {
     this.email = email;
     this.password = password;
     this.posts = posts;
-    this.comments = comments;
     this.likes = likes;
+    this.comments = comments;
+    this.saves = saves;
     this.photo = photo;
   }
   defalutValues(firstName, lastName, email, password) {
@@ -25,6 +27,7 @@ class User {
       lastName,
       email,
       password,
+      [],
       [],
       [],
       [],
@@ -38,8 +41,9 @@ class User {
       data.email,
       data.password,
       data.posts,
-      data.comments,
       data.likes,
+      data.comments,
+      data.saves,
       data.photo
     );
   }
@@ -53,8 +57,9 @@ class User {
       email: this.email,
       password: this.password,
       posts: this.posts,
-      comments: this.comments,
       likes: this.likes,
+      comments: this.comments,
+      saves: this.saves,
       photo: this.photo,
     };
   }

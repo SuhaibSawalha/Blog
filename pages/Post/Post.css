@@ -63,3 +63,58 @@ article {
 #actions .bi {
   font-size: 1.8rem;
 }
+
+#likeButton:hover,
+#commentButton:hover,
+#saveButton:hover {
+  color: var(--mainGreen) !important;
+}
+
+.comment {
+  margin-top: 20px;
+}
+
+.comment img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.comment div {
+  width: calc(100% - 80px);
+  background-color: var(--mainGray);
+  padding: 10px 20px;
+}
+
+.comment a,
+article a {
+  color: var(--mainGreen);
+  font-size: 1.2rem;
+  font-family: var(--h1-font);
+  text-decoration: none;
+}
+.comment a:hover,
+article a:hover {
+  text-decoration: underline;
+}
+
+.comment p {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  #actions .bi {
+    font-size: 1.2rem;
+  }
+  #actions button p {
+    font-size: 0.7rem;
+    margin-left: 5px;
+  }
+  .comment a {
+    font-size: 1rem;
+  }
+  .comment p {
+    font-size: 0.8rem;
+  }
+}

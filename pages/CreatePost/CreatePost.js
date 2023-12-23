@@ -38,9 +38,9 @@ document
         <h5 style="color: var(--mainGreen)">${user_data.firstName} ${user_data.lastName}</h5>
         <h5 style="color: var(--mainGreen); margin-bottom: 30px">${post.fullDate}</h5>
     </div>
-    <h2 style="font-family: var(--h1-font)">${post.title}</h2>
+    <h2 style="font-family: var(--h1-font); overflow-wrap: break-word">${post.title}</h2>
     <div class="line"></div>
-    <p style="font-family: var(--content-font)">${post.content}</p>
+    <p style="font-family: var(--content-font); overflow-wrap: break-word">${post.content}</p>
     `;
   });
 

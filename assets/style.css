@@ -95,4 +95,14 @@ nav {
   .nav-item {
     margin-left: 10px !important;
   }
+  #singupNav {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #logoutNav {
+    margin-bottom: 20px;
+  }
+  nav:has(#navbarSupportedContent.show) {
+    border-bottom: 2px solid var(--mainGreen);
+  }
 }
