@@ -1,0 +1,26 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main div {
+  display: flex;
+}
+main h1 {
+  color: white;
+  font-size: 5rem;
+}
+main h2 {
+  font-size: 3rem;
+  color: var(--mainGreen);
+}
+
+@media (max-width: 360px) {
+  main h1 {
+    font-size: 4rem;
+  }
+}

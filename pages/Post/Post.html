@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="icon" type="image/png" href="./../../assets/img/logo.png" />
+    <link rel="stylesheet" href="./../../assets/Bootstrap/style.css" />
+    <link rel="stylesheet" href="./../../assets/style.css" />
+    <link rel="stylesheet" href="./Post.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <header></header>
+    <main class="container">
+      <section id="edit"></section>
+      <article></article>
+      <section id="actions" class="row">
+        <div class="col-4">
+          <button id="likeButton">
+            <i class="bi bi-hand-thumbs-up" id="likeIcon"></i>
+            <p>Like</p>
+          </button>
+        </div>
+        <div class="col-4">
+          <button id="commentButton">
+            <i class="bi bi-chat-dots" id="commentIcon"></i>
+            <p>Comment</p>
+          </button>
+        </div>
+        <div class="col-4">
+          <button id="saveButton">
+            <i class="bi bi-file-earmark" id="saveIcon"></i>
+            <p>Save</p>
+          </button>
+        </div>
+      </section>
+      <h5 class="ms-3 mt-4" style="color: var(--mainPurple)">
+        <span id="numberOfLikes">0</span> liked this post
+      </h5>
+      <h6 class="ms-3 mt-3" style="color: var(--mainPurple)">
+        comments (<span id="numberOfComments">0</span>):
+      </h6>
+      <section id="comments"></section>
+      <section id="commentForm">
+        <form>
+          <div class="mb-3">
+            <label for="comment" class="form-label">Comment</label>
+            <textarea
+              class="form-control"
+              id="comment"
+              rows="3"
+              placeholder="Write a comment..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">add comment</button>
+        </form>
+    </main>
+    <div style="width: 1px; height: 100px"></div>
+    <footer></footer>
+    <script src="./../../assets/main.js"></script>
+    <script src="./../../assets/Bootstrap/main.js"></script>
+    <script type="module" src="./../../assets/header_footer.js"></script>
+    <script type="module" src="./Post.js"></script>
+  </body>
+</html>

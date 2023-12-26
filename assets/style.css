@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap");
+/*
+  font-family: "Hedvig Letters Serif", serif;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap");
+/*
+  font-family: 'Mina', sans-serif;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+/*
+  font-family: 'Open Sans', sans-serif;
+*/
+
+:root {
+  --mainGreen: #60b478;
+  --mainPurple: #9a7cf8;
+  --mainBlack: #100f11;
+  --mainGray: #302e35;
+  --nav-font: "Hedvig Letters Serif", serif;
+  --h1-font: "Mina", sans-serif;
+  --content-font: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mainBlack);
+}
+
+nav {
+  position: relative;
+  background-color: var(--mainGray);
+  font-family: var(--nav-font);
+}
+.navbar-nav .nav-item:first-child {
+  margin-left: 20px;
+}
+.nav-item {
+  margin-left: 10px;
+  width: 80px;
+  transition: all 0.2s ease-in-out;
+}
+.navbar-collapse {
+  justify-content: space-between;
+}
+.logs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logs .nav-item {
+  margin-left: 0;
+  list-style-type: none;
+}
+.nav-active a {
+  background-color: var(--mainPurple);
+  text-align: center;
+  color: var(--mainGray);
+}
+.nav-active-logs a {
+  color: var(--mainPurple) !important;
+}
+@media (min-width: 991.5px) {
+  .nav-item {
+    text-align: center;
+  }
+  .nav-item:hover {
+    background-color: var(--mainGreen);
+  }
+  .logs .nav-item {
+    background: none;
+  }
+  .logs .nav-item:hover a {
+    color: var(--mainGreen);
+  }
+}
+
+.logs h3 {
+  margin: 0 -5px;
+}
+
+@media (max-width: 991.5px) {
+  .logs {
+    display: block;
+    position: relative;
+    right: 0;
+  }
+  .logs h3 {
+    display: none;
+  }
+  .nav-item {
+    margin-left: 10px !important;
+  }
+  #singupNav {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #logoutNav {
+    margin-bottom: 20px;
+  }
+  nav:has(#navbarSupportedContent.show) {
+    border-bottom: 2px solid var(--mainGreen);
+  }
+}

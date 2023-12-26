@@ -1,0 +1,98 @@
+main h1 {
+  color: var(--mainPurple);
+  margin-top: 100px;
+  font-family: var(--h1-font);
+  margin-bottom: 20px;
+}
+form label {
+  color: white;
+  margin-bottom: 5px;
+}
+input,
+textarea,
+form div {
+  width: 100%;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+main > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+main > div button {
+  width: 80px;
+}
+
+main > div p {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0;
+  height: 55px;
+}
+
+.btn-success {
+  margin-left: 5px;
+}
+main > div > p {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.line {
+  width: max(40%, 250px);
+  background-color: var(--mainPurple);
+  height: 2px;
+  margin-bottom: 40px;
+}
+
+article {
+  margin-top: 50px;
+  color: white;
+  border: 1px solid var(--mainGreen);
+  padding: 20px;
+}
+
+@media (max-width: 991.5px) {
+  article {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767.5px) {
+  article {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575.5px) {
+  article {
+    padding: 20px 15px;
+  }
+  article h5 {
+    font-size: 1rem;
+  }
+  article h2 {
+    font-size: 1.2rem;
+  }
+  article p {
+    font-size: 0.8rem;
+  }
+  article > div:first-child {
+    flex-direction: column;
+  }
+  article > div:first-child a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .line {
+    width: 200px;
+  }
+}

@@ -1,0 +1,25 @@
+main {
+  margin-top: 100px;
+}
+
+main h1 {
+  color: var(--mainPurple);
+  font-family: var(--nav-font);
+  margin-bottom: 20px;
+}
+main span {
+  color: var(--mainGreen);
+  font-family: var(--h1-font);
+}
+main h5 {
+  color: white;
+  margin-bottom: 50px;
+}
+main video {
+  width: 50%;
+  height: 50%;
+}
+main iframe {
+  width: min(100%, 600px);
+  height: 350px;
+}
