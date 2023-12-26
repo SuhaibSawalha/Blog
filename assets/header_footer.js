@@ -1,5 +1,5 @@
 await setUserId();
-const header = (document.getElementsByTagName("header")[0].innerHTML = `
+document.getElementsByTagName("header")[0].innerHTML = `
 <nav class="navbar fixed-top navbar-expand-lg">
     <div class="container">
     <a class="navbar-brand text-white" href="./../Home/Home.html">
@@ -76,4 +76,6 @@ const header = (document.getElementsByTagName("header")[0].innerHTML = `
     </div>
     </div>
 </nav>
-`);
+`;
+
+document.querySelector("footer").innerHTML = ``;

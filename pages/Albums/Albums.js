@@ -1,4 +1,5 @@
 let users;
+// get all users from database for the search bar
 try {
   const usersResponse = await fetch(`${api}/users`);
   if (usersResponse.status !== 200) {
@@ -10,12 +11,15 @@ try {
   window.location.href = "./../error404/error404.html";
 }
 
+// get the id from the url
 const id = new URLSearchParams(window.location.search).get("id");
 if (window.location.search !== "") {
+  // check if the id isn't a number, then redirect to the original page
   if (isNaN(id) || isNaN(parseInt(id))) {
     window.location.href = "./../Albums/Albums.html";
   }
   try {
+    // find the user with the id and display it's albums
     const user = users.find((user) => {
       return user.id == id;
     });
@@ -56,8 +60,10 @@ if (window.location.search !== "") {
   document.getElementById("loading").style.display = "none";
 }
 
+// build the search method
 function Search() {
   const search = this.value;
+  // get all the users that contains at least one subsequence matches the search
   const results = users.filter((user) => {
     let j = 0;
     const userName = `${user.firstName} ${user.lastName}`;

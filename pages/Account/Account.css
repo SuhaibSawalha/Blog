@@ -49,6 +49,10 @@ aside section button {
   margin-top: 10px;
 }
 
+aside section button:last-child {
+  width: 100%;
+}
+
 #posts {
   width: 60%;
   height: 100%;

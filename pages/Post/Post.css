@@ -1,5 +1,16 @@
+main {
+  margin-top: 80px;
+}
+
+#edit a {
+  text-decoration: none;
+}
+#edit a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 article {
-  margin-top: 100px;
   color: white;
   border: 1px solid var(--mainGreen);
   padding: 20px 40px !important;
@@ -36,6 +47,18 @@ article {
   }
   article p {
     font-size: 0.8rem;
+  }
+  article > div:first-child {
+    flex-direction: column;
+  }
+  article > div:first-child a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .line {
+    width: 200px;
   }
 }
 
@@ -81,10 +104,17 @@ article {
   border-radius: 50%;
 }
 
-.comment div {
+.comment > div {
   width: calc(100% - 80px);
   background-color: var(--mainGray);
   padding: 10px 20px;
+}
+.comment > div > div {
+  margin-bottom: 10px;
+  align-items: center;
+}
+.comment div div i {
+  color: var(--mainPurple) !important;
 }
 
 .comment a,
@@ -96,7 +126,7 @@ article a {
 }
 .comment a:hover,
 article a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .comment p {
@@ -110,6 +140,17 @@ article a:hover {
   #actions button p {
     font-size: 0.7rem;
     margin-left: 5px;
+  }
+  .comment img {
+    width: 40px;
+    height: 40px;
+  }
+  .comment > div {
+    width: calc(100% - 70px);
+  }
+  .comment > div > div {
+    flex-direction: column-reverse;
+    align-items: start !important;
   }
   .comment a {
     font-size: 1rem;

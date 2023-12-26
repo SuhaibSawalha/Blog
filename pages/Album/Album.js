@@ -1,25 +1,20 @@
+// get the id from the url
 const id = new URLSearchParams(window.location.search).get("id");
 if (window.location.search !== "") {
   if (isNaN(id) || isNaN(parseInt(id))) {
+    // check if the id isn't a number, then redirect to error page
     window.location.href = "./../error404/error404.html";
   }
   try {
+    // get the album from the api
     const albumResponse = await fetch(
       `https://jsonplaceholder.typicode.com/albums/${id}`
     );
     if (albumResponse.status !== 200) {
       throw new Error();
     }
-    const albumData = await albumResponse.json();
-    const user_id = albumData.userId;
-    const userResponse = await fetch(
-      `https://jsonplaceholder.typicode.com/users/${user_id}`
-    );
-    if (userResponse.status !== 200) {
-      throw new Error();
-    }
-    const userData = await userResponse.json();
 
+    // get the photos of the album from the api
     const photosResponse = await fetch(
       `https://jsonplaceholder.typicode.com/albums/${id}/photos`
     );
@@ -28,14 +23,14 @@ if (window.location.search !== "") {
     }
     const photosData = await photosResponse.json();
 
+    // fill the photos container with the photos
     const photosContainer = document.querySelector("article");
     photosContainer.innerHTML = "";
-    let innerAlbums = "";
     for (const photo of photosData) {
+      // get a random image from the api
       const image_response = await fetch("https://picsum.photos/150/150");
       const image_data = await image_response.blob();
       const image = URL.createObjectURL(image_data);
-      console.log(photo);
       photosContainer.innerHTML += `
         <div class="card">
             <img src=${image} alt="users photo" class="card-img-top"/>

@@ -53,6 +53,13 @@ article {
   margin-bottom: 30px;
   text-align: center;
 }
+.post-card-header a {
+  color: var(--mainGreen);
+  text-decoration: none;
+}
+.post-card-header a:hover {
+  text-decoration: underline;
+}
 .post-card-title {
   font-family: var(--h1-font);
 }

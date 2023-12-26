@@ -1,5 +1,8 @@
+// a class to create a user object
+// each user has a first name, last name, email, password, posts, likes, comments, saves, and photo
 class User {
   constructor() {}
+  // set the values of the user
   setValues(
     firstName,
     lastName,
@@ -21,10 +24,11 @@ class User {
     this.saves = saves;
     this.photo = photo;
   }
+  // set the first name, last name, email, and password of the user and set the default values for the rest
   defalutValues(firstName, lastName, email, password) {
     this.setValues(
-      firstName,
-      lastName,
+      escape(firstName),
+      escape(lastName),
       email,
       password,
       [],
@@ -34,6 +38,7 @@ class User {
       "./../../assets/img/profile.jpg"
     );
   }
+  // set the values of the user from an object
   objectValues(data) {
     this.setValues(
       data.firstName,
@@ -47,9 +52,12 @@ class User {
       data.photo
     );
   }
+  // get a full name of the user
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
+
+  // express the user as an object
   toObject() {
     return {
       firstName: this.firstName,
@@ -63,9 +71,11 @@ class User {
       photo: this.photo,
     };
   }
+  // express the user as a string
   toDataBase() {
     return JSON.stringify(this.toObject());
   }
 }
 
+// export the class to be used in other files
 export { User };

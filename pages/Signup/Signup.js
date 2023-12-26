@@ -1,30 +1,34 @@
+// if a user is logged in, redirect him to home page
 if ((await setUserId()) !== null) {
   window.location.href = "./../Home/Home.html";
 }
 
+// show and hide password
 document.getElementsByTagName("i")[0].addEventListener("click", function () {
   if (this.classList.contains("bi-eye")) {
     this.classList.remove("bi-eye");
     this.classList.add("bi-eye-slash");
-    document.querySelector(`input[aria-label="password"`).type = "text";
+    document.querySelector(`input[aria-label="password"`).type = "password";
   } else {
     this.classList.remove("bi-eye-slash");
     this.classList.add("bi-eye");
-    document.querySelector(`input[aria-label="password"`).type = "password";
+    document.querySelector(`input[aria-label="password"`).type = "text";
   }
 });
 
+// write warning message
 function writeWarning(input, message) {
   input.previousElementSibling.previousElementSibling.querySelector(
     "span"
   ).innerHTML = message ? `&nbsp;&nbsp;&nbsp;*${message}` : ``;
 }
 
-let usedEmail;
+// submit the form
 document
   .getElementsByTagName("form")[0]
   .addEventListener("submit", async function (e) {
     e.preventDefault();
+    // check the first name, last name, email, password and confirm password
     const firstName = document.querySelector(`input[aria-label="first-name"`);
     const lastName = document.querySelector(`input[aria-label="last-name"`);
     const email = document.querySelector(`input[aria-label="email"`);
@@ -49,8 +53,7 @@ document
       writeWarning(email, "invalid email");
       ok = false;
     }
-    await checkEmail(email.value);
-    if (usedEmail === true) {
+    if ((await checkEmail(email.value)) === true) {
       writeWarning(email, "this email is used");
       ok = false;
     } else {
@@ -71,6 +74,7 @@ document
     if (!ok) {
       return;
     }
+    // create the user
     await createUser(
       firstName.value,
       lastName.value,
@@ -81,6 +85,7 @@ document
 
 import { User } from "./../../assets/classes/User.js";
 
+// build a function to create a user and save it in the databases
 async function createUser(firstName, lastName, email, password) {
   try {
     const user = new User();
@@ -96,6 +101,7 @@ async function createUser(firstName, lastName, email, password) {
       throw new Error();
     }
     const data = await response.json();
+    // create a session for the user
     await createSession(data.accessToken, data.user.id);
     window.location.href = "./../Account/Account.html";
   } catch (error) {
@@ -103,6 +109,7 @@ async function createUser(firstName, lastName, email, password) {
   }
 }
 
+// build a function to check if the email is used before
 async function checkEmail(email) {
   try {
     const response = await fetch(`${api}/users?email=${email}`);
@@ -111,25 +118,10 @@ async function checkEmail(email) {
       throw new Error();
     }
     if (data.length !== 0) {
-      usedEmail = true;
-    } else {
-      usedEmail = false;
+      return true;
     }
-    return response;
+    return false;
   } catch (error) {
     window.location.href = "./../error404/error404.html";
   }
 }
-
-const firstName = document.querySelector(`input[aria-label="first-name"`);
-const lastName = document.querySelector(`input[aria-label="last-name"`);
-const email = document.querySelector(`input[aria-label="email"`);
-const password = document.querySelector(`input[aria-label="password"`);
-const confirmPassword = document.querySelector(
-  `input[aria-label="confirm-password"`
-);
-firstName.value = "Suhaib";
-lastName.value = "Sawalha";
-email.value = "suhaib@suhaib.com";
-password.value = "suhaibsuhaib";
-confirmPassword.value = "suhaibsuhaib";

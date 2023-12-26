@@ -1,7 +1,9 @@
+// if the user is not logged in, redirect to login page
 if ((await setUserId()) === null) {
   window.location.href = "./../Login/Login.html";
 }
 
+// if the user refreshed the page or leaved it and there was an uncompleted post, ask him if he wants to leave the page
 window.onbeforeunload = function (event) {
   const title = this.document.querySelector(`input[aria-label="title"]`).value;
   const content = this.document.querySelector(`textarea`).value;
@@ -14,9 +16,11 @@ window.onbeforeunload = function (event) {
 
 import { Post } from "./../../assets/classes/Post.js";
 
+// when click the review button, show the post in the bottom
 document
   .querySelector(".btn-submit")
   .addEventListener("click", async function (e) {
+    // check if the title or the body are empty, then ask user to fill them
     const title = document
       .querySelector(`input[aria-label="title"]`)
       .value.trim();
@@ -25,10 +29,17 @@ document
       alert("Please fill the title and the content");
       return;
     }
+    // create the article and add it
     let article = document.querySelector("article");
+    let empty = document.getElementById("empty");
     if (!article) {
       article = document.createElement("article");
       document.querySelector("main").appendChild(article);
+    }
+    if (!empty) {
+      empty = document.createElement("div");
+      empty.style.cssText = `width: 1px; height: 50px;`;
+      document.querySelector("main").appendChild(empty);
     }
     const user_data = await setUserId();
     const post = new Post();
@@ -44,6 +55,7 @@ document
     `;
   });
 
+// when click post button, add the post to the data base and redirect to it
 document
   .querySelector(".btn-success")
   .addEventListener("click", async function (e) {
@@ -77,6 +89,7 @@ document
     }
   });
 
+// build a function to add the post to the user data base
 async function addPostToUser(user_id, post_id) {
   try {
     const response = await fetch(`${api}/users/${user_id}`);
@@ -105,6 +118,7 @@ async function addPostToUser(user_id, post_id) {
   }
 }
 
+// when click the cancel button, clear the inputs and the article
 document.querySelector(".btn-danger").addEventListener("click", function (e) {
   document.querySelector(`input[aria-label="title"]`).value = "";
   document.querySelector(`textarea`).value = "";
